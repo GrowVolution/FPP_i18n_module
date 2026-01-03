@@ -1,0 +1,12 @@
+{% extends "base_example.html" %}
+
+{% block title %}I18n{% endblock %}
+
+{% block head %}
+    {{ tailwind }}
+    {{ vite('main.js') }}
+{% endblock %}
+
+{% block modals %}
+    {% include NAME ~ "/entry_modal.html" %}
+{% endblock %}

@@ -1,0 +1,18 @@
+<tr id="{{ entry.key }}---{{ entry.domain }}">
+    <td>{{ entry.key }}</td>
+    <td>{{ entry.locale }}</td>
+    <td class="px-2">
+        <input type="text"
+               value="{{ entry.text }}"
+               class="msg-data"
+               disabled>
+    </td>
+    <td>{{ entry.domain }}</td>
+    <td>
+        <div class="opt-div">
+            <button type="button" class="btn btn-edit">✏️</button>
+            <span class="font-semibold">/</span>
+            <button type="button" class="btn btn-delete">🗑️</button>
+        </div>
+    </td>
+</tr>

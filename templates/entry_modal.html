@@ -1,0 +1,40 @@
+{% extends "base_modal.html" %}
+
+{% block id %}entryModal{% endblock %}
+
+{% block body %}
+    <form id="entryModalForm">
+        <div class="input-group">
+            <span class="input-group-text">🔑</span>
+            <input id="entryModalKey" type="text" class="form-control" required>
+        </div>
+
+        <div class="input-group mt-3">
+            <span class="input-group-text">📁</span>
+            <input id="entryModalDomain" type="text" value="messages" class="form-control" required>
+        </div>
+    </form>
+
+    <div class="input-group mt-3">
+        <span class="input-group-text">💬</span>
+        <select id="entryModalLocale" class="form-control">
+            <option value="" selected>{{ _("SELECT_LOCALE") }}...</option>
+            {% for locale in config["SUPPORTED_LOCALES"].split(";") %}
+                <option value="{{ locale }}">{{ locale.upper() }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="input-group mt-3 hidden">
+        <span class="input-group-text">📝</span>
+        <textarea id="entryModalMessage" type="text" class="form-control" rows="1"></textarea>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <button id="entryModalSave"
+            type="button"
+            class="btn btn-add font-semibold w-fit px-5">
+        {{ _("SAVE") }}
+    </button>
+{% endblock %}

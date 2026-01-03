@@ -1,0 +1,6 @@
+[folders]
+.idea
+dist
+
+[files]
+tailwind.css

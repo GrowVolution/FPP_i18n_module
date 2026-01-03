@@ -1,0 +1,13 @@
+
+from pathlib import Path
+from importlib import import_module
+
+_package = Path(__file__).parent
+
+
+def init_models():
+    from .. import module
+    for file in _package.rglob("*.py"):
+        if file.stem == "__init__" or file.stem.startswith("noinit"):
+            continue
+        import_module(f"{module.import_name}.data.{file.stem}")

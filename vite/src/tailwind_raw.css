@@ -1,0 +1,70 @@
+
+@import "tailwindcss" source("../");
+
+@theme {
+    /* ... */
+}
+
+@layer base {
+    table {
+        @apply bg-slate-500 rounded-md border-collapse w-full lg:max-w-[90vw];
+    }
+
+    th, td {
+        @apply py-1 text-center;
+    }
+
+    th:not(:first-child), td:not(:first-child) {
+        @apply border-l;
+    }
+
+    tr td {
+        @apply border-t;
+    }
+}
+
+@layer components {
+    .msg-data {
+        @apply bg-slate-200 rounded-md px-1 w-full;
+    }
+
+    .opt-div {
+        @apply flex gap-2 w-full items-center justify-center px-2;
+    }
+
+    .btn {
+        @apply rounded-md text-center w-full py-0.5;
+    }
+
+    .btn-edit {
+        @apply bg-blue-600 hover:bg-blue-800;
+    }
+
+    .btn-delete {
+        @apply bg-red-600 hover:bg-red-800;
+    }
+
+    .btn-add {
+        @apply bg-green-600 hover:bg-green-700;
+    }
+
+    .input-group {
+        @apply flex w-full rounded-md border border-gray-300 overflow-hidden;
+    }
+
+    .form-control {
+        @apply w-full p-1 text-sm bg-transparent
+        focus:outline-0 focus:border focus:rounded-r-md focus:border-gray-400/50;
+    }
+
+    .input-group-text {
+        @apply flex items-center px-3 text-sm
+        text-gray-500 bg-gray-100
+        border-r border-gray-300
+        whitespace-nowrap;
+    }
+
+    .table-container {
+        @apply min-h-screen w-full flex-col px-3;
+    }
+}
