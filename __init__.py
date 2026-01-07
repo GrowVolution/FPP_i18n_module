@@ -1,4 +1,5 @@
 from flaskpp import Module, FlaskPP
+from flaskpp.babel import register_module
 from flaskpp.utils import enabled
 from flaskpp.exceptions import ModuleError
 
@@ -28,7 +29,7 @@ def enable(app: FlaskPP):
     from .data.noinit_translations import setup_db
     with app.app_context():
         setup_db(module)
-        app.extensions['babel'].babel.register_module(module)
+        register_module(module)
     module.init_routes()
 
     from .handling.socket_events import register_events

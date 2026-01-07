@@ -65,6 +65,6 @@
     }
 
     .table-container {
-        @apply min-h-screen w-full flex-col px-3;
+        @apply min-h-screen w-full flex-col px-3 py-5;
     }
 }

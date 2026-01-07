@@ -1,6 +1,10 @@
 {
-  "name": "I18n Module",
-  "description": "Manage your messages easily.",
-  "version": "0.1",
-  "author": "Pierre"
+  "id": "i18n_module",
+  "name": "Translation Manager",
+  "description": "Graphical interface for managing translation keys.",
+  "version": "0.2",
+  "author": "Pierre",
+  "requires": {
+    "fpp": ">=0.3.0"
+  }
 }
